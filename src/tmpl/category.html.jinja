@@ -1,0 +1,59 @@
+{%- extends "index.html.jinja" -%}
+{%- import "tools.html.jinja" as html -%}
+{%- import "jobs.html.jinja" as jobs -%}
+{%- import "education.html.jinja" as education -%}
+{%- import "extra.html.jinja" as extra -%}
+{%- block head -%}
+{{html.css('css/main.css')}}
+{{html.js(['js/jquery.js','js/lodash.js'])}}
+{%- if js is defined -%}
+{{html.js(js)}}
+{%- endif -%}
+{%- endblock head -%}
+{%- block body -%}
+
+{%- if header is defined -%}
+<div class="header section">
+</div>
+{%- endif -%}
+
+{%- if introduction is defined -%}
+<div class="introduction section">
+</div>
+{%- endif -%}
+
+{%- if cv.jobs is defined -%}
+<div class="job section">
+  {%- for job in cv.jobs -%}
+    {{jobs.each(job)}}
+  {%- endfor -%}
+</div>
+{%- endif -%}
+
+{%- if cv.education is defined -%}
+<div class="education section">
+  {%- for school in cv.education -%}
+    {{education.each(job)}}
+  {%- endfor -%}
+</div>
+{%- endif -%}
+
+{%- if cv.extra is defined -%}
+<div class="extra section">
+  {%- for ex in cv.extra -%}
+    {{extra.each(ex)}}
+  {%- endfor -%}
+</div>
+{%- endif -%}
+
+{%- if keywords is defined -%}
+<div class="keywords section">
+</div>
+{%- endif -%}
+
+{%- if footer is defined -%}
+<div class="footer section">
+</div>
+{%- endif -%}
+
+{%- endblock body -%}
