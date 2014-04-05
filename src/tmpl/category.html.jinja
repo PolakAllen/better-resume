@@ -1,8 +1,7 @@
 {%- extends "index.html.jinja" -%}
-{%- import "tools.html.jinja" as html -%}
-{%- import "jobs.html.jinja" as jobs -%}
-{%- import "education.html.jinja" as education -%}
-{%- import "extra.html.jinja" as extra -%}
+{%- import "tools.jinja" as tools -%}
+{%- import "html.jinja" as html -%}
+{%- import "resumetools.html.jinja" as resume -%}
 {%- block head -%}
 {{html.css('css/main.css')}}
 {{html.js(['js/jquery.js','js/lodash.js'])}}
@@ -25,7 +24,7 @@
 {%- if cv.jobs is defined -%}
 <div class="job section">
   {%- for job in cv.jobs -%}
-    {{jobs.each(job)}}
+    {%- include "job.html.jinja" -%}
   {%- endfor -%}
 </div>
 {%- endif -%}
@@ -33,7 +32,7 @@
 {%- if cv.education is defined -%}
 <div class="education section">
   {%- for school in cv.education -%}
-    {{education.each(job)}}
+    {%- include "school.html.jinja" -%}
   {%- endfor -%}
 </div>
 {%- endif -%}
@@ -41,7 +40,7 @@
 {%- if cv.extra is defined -%}
 <div class="extra section">
   {%- for ex in cv.extra -%}
-    {{extra.each(ex)}}
+    {%- include resume.sectionname_to_filename(ex.name) -%}
   {%- endfor -%}
 </div>
 {%- endif -%}

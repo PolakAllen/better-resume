@@ -11,6 +11,6 @@ def main():
   template = html.Templates("tmpl")
   category = template["category"]
   data = getdoc("data/raw.yaml")
-  with open("index.html","w") as f:
+  with open("../out/index.html","w") as f:
     f.write(category.render(data))
 main()

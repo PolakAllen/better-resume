@@ -1,0 +1,28 @@
+{%- import "tools.jinja" as tools -%}
+{%- import "html.jinja" as html -%}
+{%- macro time(t) -%}
+{%- if t is a "list" -%}
+<div class="time">
+  {%- if t[1] -%}
+    <span class="start-time">{{t[0]}}</span><span class="stop-time">{{t[1]}}</span>
+  {%- else -%}
+    <span class="start-time">{{t[0]}}</span><span class="stop-time">-</span>
+  {%- endif -%}
+{%- else -%}
+    <span class="date">{{t[0]}}</span>
+{%- endif -%}
+</div>
+{%- endmacro -%}
+{%- macro sectionname_to_filename(sectionname) -%}
+{{sectionname|replace(" ","-")|lower()}}.html.jinja
+{%- endmacro -%}
+
+{%- macro links(list) -%}
+{%- if list -%}
+<ul class="links">
+  {%- for name in list -%}
+  <a href="#{{name}}"><li>{{name}}</li></a>
+  {%- endfor -%}
+</ul>
+{%- endif -%}
+{%- endmacro -%}

@@ -1,0 +1,12 @@
+{%- extends "section.html.jinja" -%}
+{%- import "tools.jinja" as tools -%}
+{%- import "html.jinja" as html -%}
+{%- set title="Self Assessment" -%}
+
+{%- block content -%}
+  {{activity.description}}
+  {%- set level = level + 1 -%}
+  {%- for project in activity.projects -%}
+    {%- include "project.html.jinja" -%}
+  {%- endfor -%}
+{%- endblock -%}

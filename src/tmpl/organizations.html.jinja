@@ -1,0 +1,22 @@
+{%- extends "section.html.jinja" -%}
+{%- import "tools.jinja" as tools -%}
+{%- import "html.jinja" as html -%}
+{%- set title="Organizations" -%}
+
+{%- block content -%}
+  {%- set level = level+1 -%}
+  <ul class="organizations">
+  {%- for org in ex.list -%}
+    <li class="{{html.name_to_classname(org.name)}}">
+      <div class="name">{{org.name}}</div>
+      {{resume.time(org.time)}}
+      <ul class="roles">
+      {%- for role in org.positions -%}
+        <li>{{role}}</li>
+      {%- endfor -%}
+      </ul>
+      <p>{{org.description|e}}</p>
+    </li>
+  {%- endfor -%}
+  </ul>
+{%- endblock content -%}

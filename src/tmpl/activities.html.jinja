@@ -1,0 +1,12 @@
+{%- extends "section.html.jinja" -%}
+{%- import "tools.jinja" as tools -%}
+{%- import "html.jinja" as html -%}
+{%- import "resumetools.html.jinja" as resume -%}
+{%- set title="Activities" -%}
+
+{%- block content -%}
+  {%- set level = level+1 -%}
+  {%- for activity in ex.list -%}
+    {%- include resume.sectionname_to_filename(activity.name) -%}
+  {%- endfor -%}
+{%- endblock content -%}

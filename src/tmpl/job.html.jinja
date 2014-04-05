@@ -1,0 +1,43 @@
+{%- extends "section.html.jinja" -%}
+{%- import "tools.jinja" as tools -%}
+{%- import "html.jinja" as html -%}
+{%- import "resumetools.html.jinja" as resume -%}
+{%- set title=job.employer -%}
+{%- block header -%}
+<div class="job-header {{html.classlist(title)}}">
+<h{{level}}>{{title}}</h{{level}}>
+<div class="location">{{job.location}}</div>
+</div>
+{%- endblock header -%}
+
+{%- block content -%}
+  {%- set level=level+1 -%}
+  {%- for position in job.positions -%}
+    <div class="position">
+      <div class="title">{{position.title}} {% if position.unofficaltitle %} ({{position.unofficaltitle}}){% endif %}</div>
+      {{resume.time(position.time)}}
+    </div>
+    {%- if position.tasks or position.projects -%}
+    <div class="overview">
+      {%- if position.tasks -%}
+        <ol class="tasks">
+        {% for task in position.tasks -%}
+          <li>
+            {{task}}
+          </li>
+        {%- endfor %}
+        </ol>
+      {%- endif -%}
+      {%- if position.projects -%}
+        <ol class="projects">
+        {% for project in position.projects -%}
+          <li>
+            {% include "project.html.jinja" %}
+          </li>
+        {%- endfor %}
+        </ol>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endblock content -%}

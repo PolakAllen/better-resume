@@ -1,0 +1,27 @@
+{%- extends "section.html.jinja" -%}
+{%- import "tools.jinja" as tools -%}
+{%- import "html.jinja" as html -%}
+{%- import "resumetools.html.jinja" as resume -%}
+{%- set title=school.name -%}
+{%- block header -%}
+<div class="school-header">
+  <h{{level}} class="school">{{school.name}}</h{{level}}>
+  <div class="location">{{school.location}}</div>
+</div>
+{%- endblock header -%}
+
+{%- block content -%}
+  {%- set level=level+1 -%}
+  <div class="metadata">
+    {% if school.degree %}<div class="degree">{{school.degree}}</div>{% endif %}
+    {{resume.time(school.time)}}
+  </div>
+  {% if school.gpa >= 3 %}<div class="gpa">{{school.gpa}} / 4.0 </div>{% endif %}
+  {%- if school.projects -%}
+  <div class="projects">
+  {% for project in school.projects %}
+    {% include "project.html.jinja" %}
+  {% endfor %}
+  </div>
+  {%- endif -%}
+{%- endblock content -%}

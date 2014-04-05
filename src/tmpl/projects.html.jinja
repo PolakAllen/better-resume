@@ -1,0 +1,11 @@
+{%- extends "section.html.jinja" -%}
+{%- import "tools.jinja" as tools -%}
+{%- import "html.jinja" as html -%}
+{%- set title="Extracurricular Projects" -%}
+
+{%- block content -%}
+  {%- set level = level+1 -%}
+  {%- for project in ex.list -%}
+    {%- include "project.html.jinja" -%}
+  {%- endfor -%}
+{%- endblock content -%}

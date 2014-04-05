@@ -1,0 +1,31 @@
+{%- import "tools.jinja" as tools -%}
+{%- import "html.jinja" as html -%}
+{%- import "resumetools.html.jinja" as resume -%}
+<div class="project">
+  <div class="project-header">
+  {% if project.link %}
+    <a href="{{project.link}}">
+  {% endif %}
+    <div class="name">{{project.name}} {% if project.client %}({{project.client}}){% endif %}</div>
+  {% if project.link %}
+    </a>
+  {% endif %}
+  {{resume.time(project.time)}}
+  </div>
+  <div class="links-container">
+  {% for category in keyword_categories %}
+    {{resume.links(project[category])}}
+  {% endfor %}
+  </div>
+  {% if project.description %}<p>{{project.description}}</p>{% endif %}
+  {% if project.start %}<p>{{project.start}}</p>{% endif %}
+  {% if project.responsiblefor %}
+  <p>Responsible for:</p>
+    <ul class="responsiblefor">
+    {% for responsibility in project.responsiblefor %}
+      <li>{{responsibility}}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+  {% if project.end %}<p>{{project.end}}</p>{% endif %}
+</div>

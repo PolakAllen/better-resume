@@ -1,11 +1,17 @@
-keyword-categories: [tools, techenvironment, technologies, environment]
+keyword_categories: [tools, techenvironment, technologies, environment]
 cv:
+  personal:
+    name: Allen Polak
+    address: "6435 Lakeview Blvd, Aprt# 9103"
+    phone: "(734) 494 - 0197"
+    website: "apolak.me"
   jobs:
     - 
-      name: Systems in Motion
+      employer: Systems in Motion
+      location: Ann Arbor, MI
       positions:
         -
-          time: [May 2013 - October 2013]
+          time: [May 2013, October 2013]
           title: Jr. Java Developer
           unofficaltitle: Software Developer
           projects:
@@ -72,7 +78,8 @@ cv:
               end: >
                 Left in the final iteration in a green status
     - 
-      name: Terumo Cardiovascular
+      employer: Terumo Cardiovascular
+      location: Ann Arbor, MI
       positions:
         - 
           time: [June 2011, March 2013]
@@ -95,26 +102,28 @@ cv:
                 - Improved upon old system by providing all old features and more, 
                   in a codebase 1/10th the size
               description: |
-                Testing software that allowed reliable execution of testing scripts 
+                <p>Testing software that allowed reliable execution of testing scripts 
                 that monitored, logged, and interfaced with a high speed CAN 
-                environment. 
+                environment.</p>
                 
-                Features included 
-                  support for multiple hardware endpoints
-                  real time domain level intepretation of data
-                  customizable logging
-                  playback
-                  real time bridging between endpoints
-                  real time manipulation of messages at both the domain level and raw data
-                  configurable domain level schema
-                  configurable real time simulation of domain devices
+                <p>Features included:</p>
+                <ul>
+                  <li>support for multiple hardware endpoints</li>
+                  <li>real time domain level intepretation of data</li>
+                  <li>customizable logging</li>
+                  <li>playback</li>
+                  <li>real time bridging between endpoints</li>
+                  <li>real time manipulation of messages at both the domain level and raw data</li>
+                  <li>configurable domain level schema</li>
+                  <li>configurable real time simulation of domain devices</li>
+                </ul>
               start: |
-                Existing testing software implemented in VB6 had fundamental 
-                arcitecture flaws.
+                <p>Existing testing software implemented in VB6 had fundamental 
+                arcitecture flaws.</p>
 
-                After convincing management that the flaws existed and presenting 
+                <p>After convincing management that the flaws existed and presenting 
                 options to handle the situtation, it was decided we should replace 
-                and improve upon the existing software
+                and improve upon the existing software</p>
               responsiblefor:
                 - Gathering and documenting requirements
                 - Architecting and documenting the solution
@@ -145,7 +154,7 @@ cv:
 
   education:
     - 
-      school: University of Michigan
+      name: University of Michigan
       location: Dearborn, MI
       time: [September 2009, May 2014]
       degree: Bachelor of Science in Computer Science
@@ -158,10 +167,10 @@ cv:
           Technology: [Python]
           environment: [self-driven, independent]
           description: |
-            An independent study originally intended to use metadata to automate 
-            property validation and reason about program correctness
+            <p>An independent study originally intended to use metadata to automate 
+            property validation and reason about program correctness</p>
 
-            Project evolved into a metaframework supporting such frameworks
+            <p>Project evolved into a metaframework supporting such frameworks</p>
         - &Vim
           name: Benchmarking Vim
           time: [March 2014, ]
@@ -170,10 +179,10 @@ cv:
           environment: [self-driven, independent, assignment]
           techenvironment: [Linux]
           description: |
-            Is vim really more efficient than modern IDEs, such as eclipse?
+            <p>Is vim really more efficient than modern IDEs, such as eclipse?</p>
 
-            A benchmark compairson of vim for common programming tasks
-        - 
+            <p>A benchmark compairson of vim for common programming tasks</p>
+        -
           name: Lazy C Intepreter
           time: [Feburary 2014, ]
           tools: [vim, git, yaml]
@@ -181,11 +190,13 @@ cv:
           techenvironment: [Linux]
           environment: [self-driven, independent, assignment]
           description: |
-            A project for compiler design.
-              Generates intermediate code for a significant subset of C
-              Generates Lookup table from production rules
-              Parses using LR
-              Made it lazy as a personal challenge
+            <p>A project for compiler design.</p>
+            <ul>
+              <li>Generates intermediate code for a significant subset of C</li>
+              <li>Generates Lookup table from production rules</li>
+              <li>Parses using LR</li>
+              <li>Made it lazy as a personal challenge</li>
+            </ul>
         - 
           name: Android Physiognomy App
           time: [January 2013, September 2013]
@@ -205,7 +216,7 @@ cv:
   extra:
     - 
       name: projects
-      projects: 
+      list: 
         - 
           name: A Better Resume
           time: [April 2014, ]
@@ -214,14 +225,14 @@ cv:
           techenvironment: [Linux, Windows]
           environment: [self-driven, independent]
           description: |
-            A small script to generate webpages and resumes from a static listing 
-            of experience in yaml.
+            <p>A small script to generate webpages and resumes from a static listing 
+            of experience in yaml.</p>
 
-            Allows for the use of templates to create easily expandable and 
+            <p>Allows for the use of templates to create easily expandable and 
             summerizable resumes and CVs. Good design principals make it easy
-            for the project to be extended.
+            for the project to be extended.</p>
 
-            This document was created from this project.
+            <p>This document was created from this project.</p>
         - 
           name: Personal Server
           time: [June 2013, ]
@@ -230,31 +241,35 @@ cv:
           techenvironment: [Linux, Apache, Tomcat, HTTPS/SSL, SSH, git]
           environment: [self-driven, independent]
           description: |
-            On again, off again project.
+            <p>On again, off again project.</p>
 
-            Occansional work on a Ubuntu Server, experiementing with setting up a build server using LDAP / single sign on.
-            Hosts a few web development demos I've done in the past
+            <p>Occansional work on a Ubuntu Server, experiementing with setting up a build server using LDAP / single sign on.
+            Hosts a few web development demos I've done in the past</p>
         -
           name: Windows Tools
           environment: [self-driven, independent]
+          time: [June 2013,]
           description: |
-            A small collection of Windows tools that I really love to have on hand
+            <p>A small collection of Windows tools that I really love to have on hand</p>
 
-            Includes the best parts of linux:
-              bugn - a virtual desktop manager created in autohotkey
-              console2 - a better windows console
-              gitbash - includes git and mingw shell
-              ahk - for creating small utility scripts
+            <p>Includes the best parts of linux:</p>
+            <ul>
+              <li>bugn - a virtual desktop manager created in autohotkey</li>
+              <li>console2 - a better windows console</li>
+              <li>gitbash - includes git and mingw shell</li>
+              <li>ahk - for creating small utility scripts</li>
+            </ul>
           link: "https://github.com/PolakAllen/basic-tools-full-win"
         -
           name: toolbox
           environment: [self-driven, independent]
+          time: [February 2014,]
           description: |
-            A small continually wip collection of scripting tools and personal 
-            python libraries that I've written.
+            <p>A small continually wip collection of scripting tools and personal 
+            python libraries that I've written.</p>
             
-            Range from experiments in automated disambiguation, to simple practical 
-            things like automatically publishing scripts to basic project setups
+            <p>from experiments in automated disambiguation, to simple practical 
+            things like automatically publishing scripts to basic project setups</p>
     - 
       name: organizations
       list:
@@ -278,10 +293,10 @@ cv:
         -
           name: Self Assessment
           description: |
-            In the interest of measuring and improving my own skill set and productivity, 
-            I like to benchmark myself against various well known problems.
+            <p>In the interest of measuring and improving my own skill set and productivity, 
+            I like to benchmark myself against various well known problems.</p>
 
-            These are some things that I've done in the past
+            <p>These are some things that I've done in the past</p>
           projects:
             - 
               name: googlecodejam
@@ -320,17 +335,20 @@ cv:
               environment: [self-driven, independent]
               link: "http://page.mi.fu-berlin.de/prechelt/Biblio/jccpprtTR.pdf"
               description: |
-                Based off the excellently documented paper by Lutz Prechelt,
-                I repeated the experiement within personally
+                <p>Based off the excellently documented paper by Lutz Prechelt,
+                I repeated the experiement within personally</p>
 
-                I had read the paper intially and was well exposed to the domain 
+                <p>I had read the paper intially and was well exposed to the domain 
                 problem prior to documenting my time. My work on the project was
                 semi-regulated, having been done in a single continous block,
-                though not completely free from distraction.
-              results:
-                105 Noncomment LOC (Upper quartile of python programs)
-                12% Comment / LOC Ratio (Bottom quartile of python programs)
-                3.5 Hours (Lower median quartile)
+                though not completely free from distraction.</o>
+              end: |
+                <p>I completed the program with 100% success rate for the given inputs, and my results were as follows:</p>
+                <ul>
+                <li>105 Noncomment LOC (Upper quartile of python programs)</li>
+                <li>12% Comment / LOC Ratio (Bottom quartile of python programs)</li>
+                <li>3.5 Hours (Lower median quartile)</li>
+                </ul>
     -
       name: research
       list:
