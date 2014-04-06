@@ -28,7 +28,8 @@ for doing so.
 
 To use:
 
-    unzip and start writing your experience
+1. unzip and start writing your experience
+
       src/data/raw.yaml
         cv:
           intro:
@@ -43,5 +44,6 @@ To use:
           education: [{name,location,time,degree,gpa}]
           extra: [projects,activities,organizations,research]
 
-    customize just about everything
+2. customize just about everything
+
     python src/main.py
