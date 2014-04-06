@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 *.swp
+*.vim
 out/
 data/
 export.sh
