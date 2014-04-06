@@ -1,0 +1,134 @@
+body {
+  font-size: 14px;
+  font-family:"trebuchet ms";
+  width: 800px;
+  margin: auto;
+}
+ol {
+  list-style-type: none;
+}
+.content {
+  padding: 0px 25px;
+}
+ul {
+  list-style-type: square;
+}
+a, a * {
+  text-decoration-style: solid;
+  text-decoration: underline;
+  color: black;
+}
+
+a:hover {
+  color: gray;
+}
+.links-container {
+  display: block;
+}
+ul.links {
+  font-size: 10px;
+  display: inline-block;
+  background-color: gray;
+  list-style-type: none;
+  text-transform:capitalize;
+  padding: 0px;
+  margin: 0px 5px;
+}
+ul.links li {
+  font-family:"arial";
+  display: inline-block;
+  background-color: lightgray;
+  font-weight:bold;
+  padding: 2px;
+  margin: 1px;
+  box-shadow: 0px 1px 5px #888888;
+}
+ul.links li:hover {
+  background-color: darkgray;
+}
+
+.job-header > :nth-child(1),
+.school-header > :nth-child(1),
+.position > :nth-child(1),
+.metadata > :nth-child(1),
+.project-header > :nth-child(1) {
+  display: inline-block;
+  width: 69%;
+  padding-left:0px;
+  padding-right:0px;
+  margin-left:0px;
+  margin-right:0px;
+  border-left:0px;
+  border-right:0px;
+}
+.job-header > :nth-child(2),
+.school-header > :nth-child(2),
+.position > :nth-child(2),
+.metadata > :nth-child(2),
+.project-header > :nth-child(2) {
+  display: inline-block;
+  width: 30%;
+  padding-left:0px;
+  padding-right:0px;
+  margin-left:0px;
+  margin-right:0px;
+  border-left:0px;
+  border-right:0px;
+  text-align: right;
+}
+
+.header h1 {
+  font-family: "Seaweed Script", cursive;
+  font-size: 48px;
+}
+
+.left-aligned {
+  display:inline-block;
+  text-align:left;
+  width:49%;
+}
+.right-aligned {
+  display:inline-block;
+  text-align:right;
+  width:49%;
+}
+
+div.time {
+  display: inline-block;
+  font-size:12px;
+  font-style: italic;
+  vertical-align: middle;
+  width: 100px;
+  overflow: hidden;
+}
+.time .start-time {
+  display: inline-block;
+  text-align: left;
+  width: 100px;
+  overflow: hidden;
+}
+.time .stop-time {
+  display: inline-block;
+  text-align: right;
+  width: 100px;
+  overflow: hidden;
+}
+
+.project .name {
+  display: inline-block;
+  margin: 10px 0px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.position .title {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+.metadata > * {
+  display: inline-block;
+}
+.organizations.container {
+  display: none;
+}

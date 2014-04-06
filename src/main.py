@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 import yaml
 import aptools.jinja.html as html
 

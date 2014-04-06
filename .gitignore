@@ -2,6 +2,6 @@ __pycache__/
 *.pyc
 *.swp
 *.vim
-out/
+out/index.html
 data/
 export.sh
