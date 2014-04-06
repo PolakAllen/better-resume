@@ -30,20 +30,20 @@ To use:
 
 1. unzip and start writing your experience
 
-      src/data/raw.yaml
-        cv:
-          intro:
-            title:
-            content:
-          personal: {name,address,phone,email,website}
-          jobs: 
-            -
-              employer:
-              location:
-              positions: [{time,title,projects,tasks}]
-          education: [{name,location,time,degree,gpa}]
-          extra: [projects,activities,organizations,research]
+          src/data/raw.yaml
+            cv:
+              intro:
+                title:
+                content:
+              personal: {name,address,phone,email,website}
+              jobs: 
+                -
+                  employer:
+                  location:
+                  positions: [{time,title,projects,tasks}]
+              education: [{name,location,time,degree,gpa}]
+              extra: [projects,activities,organizations,research]
 
 2. customize just about everything
 
-    python src/main.py
+        python src/main.py
