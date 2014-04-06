@@ -8,9 +8,9 @@ def getdoc(filename):
     return yaml.load(f)
 
 def main():
-  template = html.Templates("tmpl")
-  category = template["category"]
+  template = html.Templates("tmpl/html")
+  cv = template["cv"]
   data = getdoc("data/raw.yaml")
   with open("../out/index.html","w") as f:
-    f.write(category.render(data))
+    f.write(cv.render(data))
 main()

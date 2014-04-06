@@ -1,0 +1,12 @@
+{%- import "tools.jinja" as tools -%}
+{%- import "html.jinja" as html -%}
+{%- import "resumetools.html.jinja" as resume -%}
+<h1 class="left-aligned">{{cv.personal.name}}</h1>
+<div class="right-aligned">
+{%- if cv.personal.website -%}
+  <div><a href={{cv.personal.website.url}}>{{cv.personal.website.display}}</a></div>
+{%- endif -%}
+{%- if cv.personal.email -%}
+  <div class="email">{{html.encode_email(cv.personal.email)}}</div>
+{%- endif -%}
+</div>

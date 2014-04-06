@@ -1,0 +1,10 @@
+{%- extends "section.html.jinja" -%}
+{%- import "tools.jinja" as tools -%}
+{%- import "html.jinja" as html -%}
+{%- import "resumetools.html.jinja" as resume -%}
+{%- set title=cv.intro.title -%}
+{%- block content -%}
+<div>
+{{cv.intro.content}}
+</div>
+{%- endblock content -%}

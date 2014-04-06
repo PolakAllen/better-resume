@@ -3,21 +3,24 @@
 {%- import "html.jinja" as html -%}
 {%- import "resumetools.html.jinja" as resume -%}
 {%- block head -%}
-{{html.css('css/main.css')}}
-{{html.js(['js/jquery.js','js/lodash.js'])}}
+{{html.css(['css/main.css','http://fonts.googleapis.com/css?family=Seaweed+Script'])}}
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+{{html.js(['js/jquery.js','js/email.js'])}}
 {%- if js is defined -%}
 {{html.js(js)}}
 {%- endif -%}
 {%- endblock head -%}
 {%- block body -%}
 
-{%- if header is defined -%}
+{%- if cv.personal is defined -%}
 <div class="header section">
+  {%- include "header.html.jinja" -%}
 </div>
 {%- endif -%}
 
-{%- if introduction is defined -%}
+{%- if cv.intro is defined -%}
 <div class="introduction section">
+  {%- include "introduction.html.jinja" -%}
 </div>
 {%- endif -%}
 
@@ -47,11 +50,13 @@
 
 {%- if keywords is defined -%}
 <div class="keywords section">
+  {%- include "keywords.html.jinja" -%}
 </div>
 {%- endif -%}
 
 {%- if footer is defined -%}
 <div class="footer section">
+  {%- include "footer.html.jinja" -%}
 </div>
 {%- endif -%}
 
