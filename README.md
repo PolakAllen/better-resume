@@ -1,6 +1,16 @@
 better-resume
 =============
 
+Seen as I'm now advertising this to people, a short disclaimer: very much WIP right now
+
+Currently refactoring for different output formats abstracting out some configuration stuff. Resume data format will likely be completely different. I'll add an example once its better solidifed.
+
+For a demo of the old version of it, go to http://apolak.me
+
+Also, dependencies. I got into the good habit of making my own libraries, but I haven't included them yet, so build is broken for vistors.
+
+=============
+
 There's no escaping a need for resumes in today's age, but usually they're very
 inefficent.
 
@@ -25,25 +35,3 @@ doing so is extremely difficult.
 Better resume is still a work in progress, but the key idea is being able to
 list and aggregate all of your personal experience, and provide multiple outputs
 for doing so.
-
-To use:
-
-1. unzip and start writing your experience
-
-          src/data/raw.yaml
-            cv:
-              intro:
-                title:
-                content:
-              personal: {name,address,phone,email,website}
-              jobs: 
-                -
-                  employer:
-                  location:
-                  positions: [{time,title,projects,tasks}]
-              education: [{name,location,time,degree,gpa}]
-              extra: [projects,activities,organizations,research]
-
-2. customize just about everything
-
-        python src/main.py
